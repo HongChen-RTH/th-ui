@@ -19,18 +19,14 @@ export default defineConfig({
       '/components/': [{
         text: '按钮',
         link: '/components/button'
-      }]
+      }],
+      '/utils/': [
+        {
+          text: 'genClass',
+          link: '/utils/gen-class',
+        },
+      ],
     },
-    //   [
-    //   {
-    //     text: 'Examples',
-    //     items: [
-    //       { text: 'Markdown Examples', link: '/markdown-examples' },
-    //       { text: 'Runtime API Examples', link: '/api-examples' }
-    //     ]
-    //   },
-
-    // ],
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
@@ -38,6 +34,7 @@ export default defineConfig({
   },
   rewrites: {
     'docs/(.*)': '(.*)',
-    'packages/th-ui/src/:comp/(.*)': 'components/:comp/(.*)'
+    'packages/th-ui/src/:comp/(.*)': 'components/:comp/(.*)',
+    'packages/utils/src/(.*)': 'utils/(.*)',
   }
 })

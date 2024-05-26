@@ -13,6 +13,12 @@
     "paths": {
       "@th-ui/utils": [
         "packages/utils/src"
+      ],
+      "th-ui": [
+        "packages/th-ui/src"
+      ],
+      "th-ui/*": [
+        "packages/th-ui/src/*"
       ]
     },
     /* Bundler mode */

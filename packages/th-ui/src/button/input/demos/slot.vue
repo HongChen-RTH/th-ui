@@ -7,18 +7,18 @@ title: 输入框聚焦
 </docs>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { onMounted, ref } from 'vue';
 
-const value = ref('')
-const inputRef = ref()
+const value = ref('');
+const inputRef = ref();
 
 onMounted(() => {
-  inputRef.value.focus()
-})
+    inputRef.value.focus();
+});
 </script>
 
 <template>
-  <div>
-    <t-input ref="inputRef" v-model="value" />
-  </div>
+    <div>
+        <th-input ref="inputRef" v-model="value" />
+    </div>
 </template>

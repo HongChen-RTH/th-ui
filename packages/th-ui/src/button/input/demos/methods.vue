@@ -7,42 +7,36 @@ title: 基础使用
 </docs>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { onMounted, ref } from 'vue';
 
-const value = ref('')
-const inputRef = ref()
+const value = ref('');
+const inputRef = ref();
 
 onMounted(() => {
-  inputRef.value.focus()
-})
+    inputRef.value.focus();
+});
 </script>
 
 <template>
-  <div>
-    value: {{ value }}
-    <t-input ref="inputRef" v-model="value" test autocomplete="off" size="large">
-      <template #prefix>
-        A
-      </template>
-      <template #suffix>
-        B
-      </template>
-    </t-input>
-    <t-input v-model="value" size="small">
-      <template #prefix>
-        A
-      </template>
-      <template #suffix>
-        B
-      </template>
-    </t-input>
-    <t-input v-model="value">
-      <template #prefix>
-        A
-      </template>
-      <template #suffix>
-        B
-      </template>
-    </t-input>
-  </div>
+    <div>
+        value: {{ value }}
+        <th-input
+            ref="inputRef"
+            v-model="value"
+            test
+            autocomplete="off"
+            size="large"
+        >
+            <template #prefix> A </template>
+            <template #suffix> B </template>
+        </th-input>
+        <th-input v-model="value" size="small">
+            <template #prefix> A </template>
+            <template #suffix> B </template>
+        </th-input>
+        <th-input v-model="value">
+            <template #prefix> A </template>
+            <template #suffix> B </template>
+        </th-input>
+    </div>
 </template>

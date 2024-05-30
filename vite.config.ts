@@ -3,6 +3,8 @@ import { defineConfig } from 'vite'
 import { vitepressDemo } from 'vite-plugin-vitepress-demo'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import Components from 'unplugin-vue-components/vite'
+import { thUIResolver } from './scripts/th-ui-resolver'
 
 const baseUrl = fileURLToPath(new URL('.', import.meta.url))
 
@@ -12,6 +14,11 @@ export default defineConfig({
   plugins: [
     vitepressDemo({
       glob: ['**/demos/*.vue']
+    }),
+    Components({
+      resolvers: [
+        thUIResolver()
+      ]
     })
   ],
   resolve: {

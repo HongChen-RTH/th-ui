@@ -6,7 +6,7 @@ import './style.css'
 
 import { AntdTheme } from 'vite-plugin-vitepress-demo/theme'
 
-import th from 'th-ui'
+// import th from 'th-ui'
 import 'th-ui/styles.ts'
 
 export default {
@@ -18,6 +18,6 @@ export default {
   },
   enhanceApp({ app, router, siteData }) {
     app.component('Demo', AntdTheme)
-    app.use(th)
+    // app.use(th)
   }
 } satisfies Theme

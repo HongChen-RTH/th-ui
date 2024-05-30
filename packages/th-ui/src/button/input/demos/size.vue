@@ -7,15 +7,15 @@ title: 输入框尺寸
 </docs>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const value = ref('')
+const value = ref('');
 </script>
 
 <template>
-  <div>
-    <t-input v-model="value" size="large" />
-    <t-input v-model="value" />
-    <t-input v-model="value" size="small" />
-  </div>
+    <div>
+        <th-input v-model="value" size="large" />
+        <th-input v-model="value" />
+        <th-input v-model="value" size="small" />
+    </div>
 </template>

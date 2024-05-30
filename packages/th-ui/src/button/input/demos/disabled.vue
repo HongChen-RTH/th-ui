@@ -7,13 +7,13 @@ title: 输入框禁用
 </docs>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const value = ref('')
+const value = ref('');
 </script>
 
 <template>
-  <div>
-    <t-input v-model="value" disabled />
-  </div>
+    <div>
+        <th-input v-model="value" disabled />
+    </div>
 </template>

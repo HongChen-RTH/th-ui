@@ -5,6 +5,7 @@
     "prepare": "husky install",
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
+    "docs:vercel": "cross-env BUILD_VERCEL=true vitepress build",
     "docs:preview": "vitepress preview",
     "genColors": "esno ./scripts/gen-colors.ts",
     "build:css": "esno ./scripts/css-bundle.ts"

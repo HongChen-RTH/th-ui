@@ -32,6 +32,7 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
   },
+  base: process.env.NODE_ENV !== 'production' ? "/th-ui/" : '/',
   rewrites: {
     'docs/(.*)': '(.*)',
     'packages/th-ui/src/:comp/(.*)': 'components/:comp/(.*)',

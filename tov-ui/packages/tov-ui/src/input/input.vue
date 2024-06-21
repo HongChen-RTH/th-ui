@@ -1,5 +1,17 @@
+<template>
+  <div :class="cls" v-bind="omit($attrs, originInputProps)">
+    <span v-if="$slots.prefix" :class="c(ce('prefix'))">
+      <slot name="prefix" />
+    </span>
+    <input ref="inputRef" v-bind="pick($attrs, originInputProps)" :disabled="disabled" :class="inputCls" :value="modelValue" @input="handleInput">
+    <span v-if="$slots.suffix" :class="c(ce('suffix'))">
+      <slot name="suffix" />
+    </span>
+  </div>
+</template>
+
 <script setup lang="ts">
-import { nextTick, onMounted, ref } from 'vue'
+import { nextTick, onMounted, ref, defineProps } from 'vue'
 import { useClassnames } from '@tov-ui/utils'
 import { omit, pick } from 'lodash-es'
 import { type InputProps, originInputProps } from './interface'
@@ -67,14 +79,4 @@ defineExpose({
 })
 </script>
 
-<template>
-  <div :class="cls" v-bind="omit($attrs, originInputProps)">
-    <span v-if="$slots.prefix" :class="c(ce('prefix'))">
-      <slot name="prefix" />
-    </span>
-    <input ref="inputRef" v-bind="pick($attrs, originInputProps)" :disabled="disabled" :class="inputCls" :value="modelValue" @input="handleInput">
-    <span v-if="$slots.suffix" :class="c(ce('suffix'))">
-      <slot name="suffix" />
-    </span>
-  </div>
-</template>
+

@@ -1,16 +1,22 @@
+/// <reference types="vitest" />
 import { defineConfig } from 'vite'
-// import vue from '@vitejs/plugin-vue'
+import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 import { vitepressDemo } from 'vite-plugin-vitepress-demo'
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
 import Components from 'unplugin-vue-components/vite'
 import { thUIResolver } from './scripts/th-ui-resolver'
 
-const baseUrl = fileURLToPath(new URL('.', import.meta.url))
+
+
+import alias from './alias'
 
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  test: {
+    globals: true,
+    environment: 'jsdom',
+  },
   plugins: [
     vitepressDemo({
       glob: ['**/demos/*.vue']
@@ -19,18 +25,11 @@ export default defineConfig({
       resolvers: [
         thUIResolver()
       ]
-    })
+    }),
+    vueJsx(),
+    vue()
   ],
   resolve: {
-    alias: [
-      {
-        find: /^th-ui/,
-        replacement: path.resolve(baseUrl, 'packages/th-ui/src'),
-      },
-      {
-        find: /^@th-ui\/utils/,
-        replacement: path.resolve(baseUrl, 'packages/utils/src'),
-      },
-    ],
+    alias
   },
 })

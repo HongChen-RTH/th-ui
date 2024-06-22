@@ -1,8 +1,4 @@
-```### 此资源由 58学课资源站 收集整理 ###
-	想要获取完整课件资料 请访问：58xueke.com
-	百万资源 畅享学习
 
-```
 # Vue 3 + TypeScript + Vite
 
 This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.

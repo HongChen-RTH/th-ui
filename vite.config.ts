@@ -26,8 +26,8 @@ export default defineConfig({
         thUIResolver()
       ]
     }),
+    // vue(),
     vueJsx(),
-    vue()
   ],
   resolve: {
     alias

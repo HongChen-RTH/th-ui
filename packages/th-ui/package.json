@@ -32,6 +32,10 @@
     "lib"
   ],
   "dependencies": {
-    "@th-ui/utils": "workspace:*"
+    "@th-ui/utils": "workspace:*",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.12"
   }
 }

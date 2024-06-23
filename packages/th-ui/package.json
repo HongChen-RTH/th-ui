@@ -32,7 +32,9 @@
     "lib"
   ],
   "dependencies": {
+    "@floating-ui/vue": "^1.0.6",
     "@th-ui/utils": "workspace:*",
+    "@v-c/utils": "^0.0.26",
     "lodash-es": "^4.17.21"
   },
   "devDependencies": {

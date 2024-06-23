@@ -25,6 +25,10 @@ export default defineConfig({
           text: '输入框',
           link: '/components/input/',
         },
+        {
+          text: 'Tooltip',
+          link: '/components/tooltip/',
+        },
       ],
       '/utils/': [
         {

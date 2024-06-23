@@ -3,6 +3,7 @@
   "type": "module",
   "scripts": {
     "prepare": "husky install",
+    "dev": "vitepress dev",
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:vercel": "cross-env BUILD_VERCEL=true vitepress build",

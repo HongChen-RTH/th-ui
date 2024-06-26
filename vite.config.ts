@@ -2,6 +2,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import tsxResolveTypes from 'vite-plugin-tsx-resolve-types'
 import { vitepressDemo } from 'vite-plugin-vitepress-demo'
 import Components from 'unplugin-vue-components/vite'
 import { thUIResolver } from './scripts/th-ui-resolver'
@@ -18,6 +19,8 @@ export default defineConfig({
     environment: 'jsdom',
   },
   plugins: [
+    tsxResolveTypes(),
+    vueJsx(),
     vitepressDemo({
       glob: ['**/demos/*.vue']
     }),
@@ -27,7 +30,6 @@ export default defineConfig({
       ]
     }),
     // vue(),
-    vueJsx(),
   ],
   resolve: {
     alias

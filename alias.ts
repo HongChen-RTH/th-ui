@@ -12,4 +12,7 @@ export default [
     find: /^@th-ui\/utils/,
     replacement: path.resolve(baseUrl, 'packages/utils/src'),
   },
+  {
+    '@style': path.resolve(__dirname, 'src/style'),
+  }
 ]

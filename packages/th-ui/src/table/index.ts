@@ -1,8 +1,10 @@
-import type { App, Plugin } from "vue"
+import type { App } from "vue"
 import Table from './table'
+import { TableColumn } from "./table-column"
 
-(Table as Plugin).install = (app: App) => {
+(Table as any).install = (app: App) => {
   app.component(Table.name, Table)
+  app.component(TableColumn.displayName, TableColumn)
 }
 
 export default Table

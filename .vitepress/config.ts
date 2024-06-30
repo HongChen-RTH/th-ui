@@ -33,6 +33,10 @@ export default defineConfig({
           text: 'Table',
           link: '/components/table/',
         },
+        {
+          text: '虚拟列表',
+          link: '/components/virtual-list/',
+        },
       ],
       '/utils/': [
         {

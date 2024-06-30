@@ -12,5 +12,6 @@ declare module 'vue' {
     ThTable: typeof import('th-ui')['Table']
     ThTableColumn: typeof import('th-ui')['TableColumn']
     ThTooltip: typeof import('th-ui')['Tooltip']
+    ThVirtualList: typeof import('th-ui')['VirtualList']
   }
 }

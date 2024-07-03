@@ -14,6 +14,9 @@
       "@th-ui/utils": [
         "packages/utils/src"
       ],
+      "@th-ui/icons": [
+        "packages/icons/src"
+      ],
       "th-ui": [
         "packages/th-ui/src"
       ],

@@ -1,0 +1,46 @@
+@import "../../style/index.less";
+
+.th-notification {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 20px;
+  min-width: 58px;
+
+  &-wrapper {
+    width: 384px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    margin-top: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, .08),
+      0 3px 6px -4px rgba(0, 0, 0, .12),
+      0 9px 28px 8px rgba(0, 0, 0, .05);
+
+    &-title {
+      margin-top: 8px;
+      font-size: 16px;
+    }
+
+    &-content {
+      font-size: 14px;
+    }
+  }
+}
+
+.th-side-right-enter-active, .th-side-right-leave-active, .th-side-right-move {
+  transition: all .3s;
+}
+
+.th-side-right-leave-active {
+  position: absolute;
+}
+
+.th-side-right-enter-from, .th-side-right-leave-to {
+  opacity: 0;
+  // 从最右侧往里移入效果
+  transform: translateX(100%)
+}
+

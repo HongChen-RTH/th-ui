@@ -37,6 +37,10 @@ export default defineConfig({
           text: '虚拟列表',
           link: '/components/virtual-list/',
         },
+        {
+          text: '通知',
+          link: '/components/notification/',
+        },
       ],
       '/utils/': [
         {

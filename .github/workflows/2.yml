@@ -43,10 +43,13 @@ jobs:
               with:
                   node-version: 20
                   cache: pnpm # 或 pnpm / yarn
+
             - name: Setup Pages
               uses: actions/configure-pages@v4
+
             - name: Install dependencies
-              run: pnpm install --no-frozen-lockfile # 或 pnpm install / yarn install / bun install
+              run: pnpm install --no-frozen-lockfile
+
             - name: Build with VitePress
               run: pnpm docs:build
                   touch .vitepress/dist/.nojektll

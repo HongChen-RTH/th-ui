@@ -13,7 +13,7 @@ on:
 
 # 设置 GITHUB_TOKEN 的权限，以允许部署到 GitHub Pages
 permissions:
-    contents: read
+    contents: write
     pages: write
     id-token: write
 
@@ -34,14 +34,14 @@ jobs:
                   fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
 
             - name: Install pnpm
-              uses: pnpm/action-setup@v2
+              uses: pnpm/action-setup@v3
               with:
                   version: 8
             # - uses: oven-sh/setup-bun@v1 # 如果使用 Bun，请取消注释
             - name: Setup Node
               uses: actions/setup-node@v4
               with:
-                  node-version: 18
+                  node-version: 20
                   cache: pnpm # 或 pnpm / yarn
             - name: Setup Pages
               uses: actions/configure-pages@v4

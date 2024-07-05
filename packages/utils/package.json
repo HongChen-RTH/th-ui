@@ -2,12 +2,11 @@
   "name": "@th-ui/utils",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "build": "unbuild"
   },
   "keywords": [],
-  "author": "",
+  "author": "worthman",
   "license": "MIT",
   "publishConfig": {
     "access": "public"

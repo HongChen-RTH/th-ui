@@ -1,12 +1,37 @@
 {
   "name": "@th-ui/icons",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "this is a icons package",
+  "keywords": [
+    "vue",
+    "vue3",
+    "icons"
+  ],
+  "author": "worthman",
+  "license": "MIT",
+  "type": "module",
+  "main": "es/index.js",
+  "types": "es/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./es/index.d.ts",
+      "import": "./es/index.js",
+      "require": "./lib/index.js"
+    },
+    "./es/*": "./es/*",
+    "./dist/*": "./dist/*",
+    "./lib/*": "./lib/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "es",
+    "lib"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  }
 }

@@ -49,7 +49,7 @@ jobs:
               run: pnpm install --no-frozen-lockfile # 或 pnpm install / yarn install / bun install
             - name: Build with VitePress
               run: pnpm docs:build
-                  toch .vitepress/dist/.nojektll
+                  touch .vitepress/dist/.nojektll
 
             - name: List files before archiving
               run: ls -la

@@ -48,12 +48,21 @@ jobs:
             - name: Install dependencies
               run: pnpm install --no-frozen-lockfile # 或 pnpm install / yarn install / bun install
             - name: Build with VitePress
-              run: pnpm run docs:build
+              run: pnpm docs:build
                   toch .vitepress/dist/.nojektll
+
+            - name: List files before archiving
+              run: ls -la
+            - name: Archive production artifacts
+              uses: actions/upload-artifact@v3
+              with:
+                  name: artifact-name
+                  path: dist/
+
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with:
-                  path: './dist'
+                  path: .vitepress/dist
 
     # 部署工作
     deploy:

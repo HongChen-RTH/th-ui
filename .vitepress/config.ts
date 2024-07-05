@@ -3,7 +3,15 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "TH UI",
+  // head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
   description: "A VitePress Site",
+  base: process.env.NODE_ENV !== 'production' && !process.env.BUILD_VERCEL ? "/th-ui/" : '/',
+  rewrites: {
+    'docs/(.*)': '(.*)',
+    'packages/th-ui/src/:comp/(.*)': 'components/:comp/(.*)',
+    'packages/utils/src/(.*)': 'utils/(.*)',
+    'packages/icons/docs/(.*)': 'components/icons/(.*)',
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -11,8 +19,6 @@ export default defineConfig({
       { text: '介绍', link: '/introduce' },
       { text: '组件', link: '/components/' },
       { text: '工具', link: '/utils/' },
-
-
     ],
 
     sidebar: {
@@ -57,12 +63,5 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
-  },
-  base: process.env.NODE_ENV !== 'production' && !process.env.BUILD_VERCEL ? "/th-ui/" : '/',
-  rewrites: {
-    'docs/(.*)': '(.*)',
-    'packages/th-ui/src/:comp/(.*)': 'components/:comp/(.*)',
-    'packages/utils/src/(.*)': 'utils/(.*)',
-    'packages/icons/docs/(.*)': 'components/icons/(.*)',
   }
 })

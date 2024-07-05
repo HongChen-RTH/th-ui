@@ -3,13 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "es/index.js",
-  "scripts": {
-    "build": "vite build",
-    "build:umd": "vite build --config vite.umd.config.ts",
-    "build:style": "vite build --config vite.style.config.ts"
-  },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "vue3",
+    "components"
+  ],
+  "author": "worthman",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
@@ -31,6 +29,11 @@
     "es",
     "lib"
   ],
+  "scripts": {
+    "build": "vite build",
+    "build:umd": "vite build --config vite.umd.config.ts",
+    "build:style": "vite build --config vite.style.config.ts"
+  },
   "dependencies": {
     "@floating-ui/vue": "^1.0.6",
     "@th-ui/utils": "workspace:*",

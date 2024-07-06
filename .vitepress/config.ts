@@ -5,7 +5,7 @@ export default defineConfig({
   title: "TH UI",
   // head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
   description: "A VitePress Site",
-  base: process.env.NODE_ENV !== 'production' && !process.env.BUILD_VERCEL ? "/th-ui/" : '/',
+  base: process.env.NODE_ENV === 'production' && !process.env.BUILD_VERCEL ? "/th-ui/" : '/',
   rewrites: {
     'docs/(.*)': '(.*)',
     'packages/th-ui/src/:comp/(.*)': 'components/:comp/(.*)',

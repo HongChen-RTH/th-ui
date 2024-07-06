@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "TH UI",
-  // head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+  head: [['link', { rel: 'icon', href: process.env.NODE_ENV === 'production' && !process.env.BUILD_VERCEL ? "/th-ui/vite.svg" : '/vite.svg' }]],
   description: "A VitePress Site",
   base: process.env.NODE_ENV === 'production' && !process.env.BUILD_VERCEL ? "/th-ui/" : '/',
   rewrites: {

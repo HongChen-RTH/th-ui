@@ -38,7 +38,8 @@
     "@floating-ui/vue": "^1.0.6",
     "@th-ui/utils": "workspace:*",
     "@v-c/utils": "^0.0.26",
-    "lodash-es": "^4.17.21"
+    "lodash-es": "^4.17.21",
+    "throttle-debounce": "^5.0.2"
   },
   "devDependencies": {
     "@types/lodash-es": "^4.17.12"

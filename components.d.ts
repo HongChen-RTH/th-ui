@@ -8,6 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     ThButton: typeof import('th-ui')['Button']
+    ThChat: typeof import('th-ui')['Chat']
     ThInput: typeof import('th-ui')['Input']
     ThTable: typeof import('th-ui')['Table']
     ThTableColumn: typeof import('th-ui')['TableColumn']

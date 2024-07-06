@@ -1,9 +1,8 @@
 // @import "../../style/index.less";
 
+@import "../../style/index.less";
+
 .th-button {
-  color: red;
-}@import "../../style/index.less";
-.th-button{
   background: none;
   cursor: pointer;
   border: 1px solid var(--th-color-border);
@@ -16,71 +15,71 @@
   display: inline-flex;
   align-items: center;
 
-  &-size{
-    &--small{
+  &-size {
+    &--small {
       height: 24px;
       padding: 2px 4px;
       font-size: 12px;
     }
 
-    &--large{
+    &--large {
       height: 40px;
       padding: 6px 12px;
       font-size: 20px;
     }
   }
 
-  &--default{
+  &--default {
     border-color: var(--th-color-border);
     color: var(--th-color-text);
 
 
-    &:hover{
+    &:hover {
       border-color: var(--th-color-primary-hover);
       color: var(--th-color-primary-hover);
     }
 
-    &:active{
+    &:active {
       border-color: var(--th-color-primary-active);
       color: var(--th-color-primary-active);
     }
   }
 
-  &--dashed{
+  &--dashed {
     border-style: dashed;
     border-color: var(--th-color-border);
     color: var(--th-color-text);
 
 
-    &:hover{
+    &:hover {
       border-color: var(--th-color-primary-hover);
       color: var(--th-color-primary-hover);
     }
 
-    &:active{
+    &:active {
       border-color: var(--th-color-primary-active);
       color: var(--th-color-primary-active);
     }
   }
 
-  &--primary{
+  &--primary {
     border-color: var(--th-color-primary);
     color: white;
     background-color: var(--th-color-primary);
 
 
-    &:hover{
+    &:hover {
       border-color: var(--th-color-primary-hover);
       background-color: var(--th-color-primary-hover);
     }
 
-    &:active{
+    &:active {
       border-color: var(--th-color-primary-active);
       background-color: var(--th-color-primary-active);
     }
   }
 
-  &:disabled{
+  &:disabled {
     cursor: not-allowed;
     border-color: #d9d9d9;
     color: #bfbfbf;

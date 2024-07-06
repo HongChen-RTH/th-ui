@@ -1,0 +1,147 @@
+@import "../../style/index.less";
+
+// 对话组件
+.to-chat {
+  >ul {
+    >li {
+      display: flex;
+
+      >.avatar {
+        img {
+          width: 4.5em;
+          height: 4.5em;
+        }
+      }
+
+      >.content {
+        flex: 1;
+        padding-bottom: 1px;
+        max-width: 75%; // fix overflow border
+
+        >.name {
+          color: red;
+          margin-left: 1em;
+          margin-bottom: 0.5em;
+        }
+
+        >.wrapper {
+          display: inline-block;
+          border: 1px solid var(--th-color-border);
+          border-radius: 0.25em;
+          padding: 0.75em 1em;
+          position: relative;
+          margin-left: 1em;
+          background: var(--th-color-success-6);
+          line-height: 1+0.5em;
+          min-height: 1.5em;
+
+          &:after {
+            content: "";
+            width: 0.5em;
+            height: 0.5em;
+            display: inline-block;
+            background: var(--th-color-success-6);
+            position: absolute;
+            left: -0.25em;
+            top: (1+2em)/2-0.25*1.44;
+            border: 1px solid var(--th-color-border);
+          }
+
+          .to-icon-talk:after {
+            // .x_rotate(180);
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    >li:not(:first-child) {
+      margin-top: 2em;
+    }
+
+    >li.type-time {
+      text-align: center;
+
+      >.time {
+        flex: 1;
+        color: green;
+        text-align: center;
+      }
+    }
+
+    >li.user-i {
+      flex-direction: row-reverse;
+
+      >.content {
+        text-align: right;
+
+        >.name {
+          margin-left: 0;
+          margin-right: 1em;
+        }
+
+        >.wrapper {
+          margin: 0 1em 0 0;
+          text-align: left;
+          background: var(--th-color-primary-1);
+          border: 1px solid var(--th-color-border);
+          // color: #fff;
+
+          &:after {
+            left: auto;
+            right: -0.25em;
+            border: none;
+            background: rgba(0, 0, 0, .85);
+            border-left: 1px solid var(--th-color-border);
+            border-top: 1px solid var(--th-color-border);
+          }
+
+          .to-icon-talk:after {
+            // .x_rotate(0);
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+// hover
+.s_pc {
+  .to-chat-link {
+    .box {
+      cursor: pointer;
+    }
+
+    .box:hover {
+      .wrapper {
+        background: rgba(0, 0, 0, .85);
+
+        &:after {
+          background: rgba(0, 0, 0, .85);
+        }
+      }
+    }
+  }
+}
+
+
+
+// active
+.s_pad,
+.s_pc,
+.s_phone {
+  .to-chat-link {
+    .box.active {
+      .wrapper {
+        background: rgba(0, 0, 0, .85);
+
+        &:after {
+          background: rgba(0, 0, 0, .85);
+        }
+      }
+    }
+  }
+}

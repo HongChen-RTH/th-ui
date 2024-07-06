@@ -51,6 +51,10 @@ export default defineConfig({
           text: '图标',
           link: '/components/icons/',
         },
+        {
+          text: 'chat',
+          link: '/components/chat/',
+        },
       ],
       '/utils/': [
         {

@@ -10,6 +10,7 @@ declare module 'vue' {
     ThButton: typeof import('th-ui')['Button']
     ThInput: typeof import('th-ui')['Input']
     ThTable: typeof import('th-ui')['Table']
+    ThTableColumn: typeof import('th-ui')['TableColumn']
     ThTooltip: typeof import('th-ui')['Tooltip']
     ThVirtualList: typeof import('th-ui')['VirtualList']
   }

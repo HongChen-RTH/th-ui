@@ -18,7 +18,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div>
+    <div class="size">
         value: {{ value }}
         <th-input
             ref="inputRef"
@@ -27,16 +27,27 @@ onMounted(() => {
             autocomplete="off"
             size="large"
         >
-            <template #prefix> A </template>
-            <template #suffix> B </template>
+            <template #prefix> 前缀</template>
+            <template #suffix> 后缀 </template>
         </th-input>
         <th-input v-model="value" size="small">
-            <template #prefix> A </template>
-            <template #suffix> B </template>
+            <template #prefix> 前缀 </template>
+            <template #suffix> 后缀 </template>
         </th-input>
         <th-input v-model="value">
-            <template #prefix> A </template>
-            <template #suffix> B </template>
+            <template #prefix> 前缀 </template>
+            <template #suffix> 后缀 </template>
         </th-input>
     </div>
 </template>
+
+<style scoped>
+.size {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.th-input {
+  margin-top: 1em;
+}
+</style>

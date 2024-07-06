@@ -13,9 +13,19 @@ const value = ref('');
 </script>
 
 <template>
-    <div>
+    <div class="size">
         <th-input v-model="value" size="large" />
         <th-input v-model="value" />
         <th-input v-model="value" size="small" />
     </div>
 </template>
+<style scoped>
+.size {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.th-input {
+  margin-top: 1em;
+}
+</style>

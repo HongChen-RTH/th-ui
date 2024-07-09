@@ -2,6 +2,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "clear": "rimraf packages/**/dist",
     "prepare": "husky install",
     "dev": "vitepress dev",
     "docs:dev": "vitepress dev",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@ant-design/colors": "^7.0.2",
+    "@changesets/cli": "^2.27.7",
     "@mistjs/eslint-config": "^1.0.0",
     "@types/node": "^20.12.12",
     "@vitejs/plugin-vue": "^4.5.2",
@@ -37,6 +39,7 @@
     "less": "^4.2.0",
     "lint-staged": "^15.2.4",
     "postcss": "^8.4.38",
+    "rimraf": "^6.0.0",
     "typescript": "^5.2.2",
     "unbuild": "^2.0.0",
     "unplugin-vue-components": "^0.27.0",

@@ -1,13 +1,14 @@
 <template>
-  <div class="to-chat" ref="chatRef">
+  <div class="th-chat" ref="chatRef">
     <ul>
       <li
         v-for="(item, index) in data"
+        class="th-chat-item"
         :key="index"
         :class="{
           'user-i': item.user === 'i',
           'user-u': item.user === 'u',
-          'type-time': item.type === 'time'
+          'type-time': item.type === 'time',
         }"
       >
         <template v-if="item.type === 'time'">
@@ -26,9 +27,9 @@
             <div class="wrapper">
               <slot :item="item" :index="index">{{ item.content }}</slot>
             </div>
-            <!-- <div class="fn">
-                            <slot name="fn" :item="item"></slot>
-                        </div> -->
+            <div class="fn">
+              <slot name="fn" :item="item"></slot>
+            </div>
           </div>
         </template>
       </li>
@@ -36,60 +37,60 @@
   </div>
 </template>
 <script setup lang="ts">
-import { nextTick, ref, computed, watch } from 'vue'
-import { Loading } from '@th-ui/icons'
+import { nextTick, ref, computed, watch } from "vue";
+import { Loading } from "@th-ui/icons";
 // import { throttle } from 'throttle-debounce';
-import type { ChatProps } from './interface';
+import type { ChatProps } from "./interface";
 defineOptions({
-  name: 'ThChat',
-  inheritAttrs: false
-})
+  name: "ThChat",
+  inheritAttrs: false,
+});
 
 // const props = defineProps<ChatProps>({
 const props = defineProps({
   data: {
     type: Array,
-    default: () => []
+    default: () => [],
   },
   avatarProps: {
     type: Object,
-    default: () => ({})
-  }
-})
-const chatRef = ref<HTMLElement | null>(null)
-const dataClone = computed(() => JSON.parse(JSON.stringify(props.data)))
+    default: () => ({}),
+  },
+});
+const chatRef = ref<HTMLElement | null>(null);
+const dataClone = computed(() => JSON.parse(JSON.stringify(props.data)));
 watch(
   dataClone,
   (newVal: any[], oldVal: any[]) => {
-    let newLastContent = newVal && newVal[newVal.length - 1].content
-    let oldLastContent = oldVal && oldVal[oldVal.length - 1].content
+    let newLastContent = newVal && newVal[newVal.length - 1].content;
+    let oldLastContent = oldVal && oldVal[oldVal.length - 1].content;
     if (newVal && newVal.length !== 0 && newVal.length > oldVal?.length) {
       nextTick(() => {
         if (chatRef.value) {
           // let that = this
-          scrollToBottom()
+          scrollToBottom();
         }
-      })
+      });
     }
     if (newLastContent !== oldLastContent) {
-      scrollToBottomLi()
+      scrollToBottomLi();
     }
   },
   { deep: true }
-)
+);
 
 // 	const scrollToBottomLi: throttle(500, true, () => {
 // 			scrollToBottom()
 // })
 const scrollToBottomLi = () => {
-  scrollToBottom()
-}
+  scrollToBottom();
+};
 const scrollToBottom = () => {
-  let endEl = chatRef.value?.querySelector('li:last-child')
+  let endEl = chatRef.value?.querySelector(".th-chat-item:last-child'");
   endEl?.scrollIntoView({
-    behavior: 'smooth',
-    block: 'end',
-    inline: 'nearest'
-  })
-}
+    behavior: "smooth",
+    block: "end",
+    inline: "nearest",
+  });
+};
 </script>

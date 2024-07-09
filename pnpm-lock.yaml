@@ -48,6 +48,9 @@ importers:
       express:
         specifier: ^4.19.2
         version: 4.19.2
+      fs-extra:
+        specifier: ^11.2.0
+        version: 11.2.0
       husky:
         specifier: ^9.0.11
         version: 9.0.11

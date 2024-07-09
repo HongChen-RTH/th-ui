@@ -15,5 +15,9 @@ export default [
   {
     find: /^@th-ui\/icons/,
     replacement: path.resolve(baseUrl, 'packages/icons/src'),
+  },
+  {
+    find: /^@th-ui\/fe/,
+    replacement: path.resolve(baseUrl, 'packages/fe'),
   }
 ]
